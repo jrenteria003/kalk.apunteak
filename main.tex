@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage{mathtools}
+
+\DeclareMathOperator{\xder}{\, \mathrm{d}x}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arcsec}{arcsec}
+
+\begin{document}
+	\section{Integral Mugagabeak}
+		\subsection{Berehalako integrazioa}
+			$ \int \xder = x + C $\\
+			$ \int x^n \xder = \frac{x^{n+1}}{n+1} + C \quad (n \neq 1) $\\
+			$ \int \frac{1}{x} \xder = \ln |x| + C $\\
+			$ \int a^x \xder = \frac{a^x}{\ln a} + C $\\
+			$ \int e^x \xder = e^x + C $\\
+			$ \int \sin x \xder = - \cos x + C $\\
+			$ \int \cos x \xder = \sin x + C $\\
+			$ \int \tan x \xder = -\ln |\cos x| + C $\\
+			$ \int \cot x \xder = \ln |\sin x| + C $\\
+			$ \int (1 + \tan^2 x) \xder = \int \frac{1}{\cos^2 x} \xder = \tan x + C $\\
+			$ \int (1 + \cot^2 x) \xder = \int \frac{1}{\sin^2 x} \xder = -\cot x + C $\\
+			$ \int \frac{1}{a^2 + x^2} \xder = \frac{1}{a} \arctan (\frac{x}{a}) + C $\\
+			$ \int \frac{1}{a^2 - x^2} \xder = \frac{1}{2a} \ln |\frac{a+x}{a'x}| + C = \frac{1}{a} arg \tanh (\frac{x}{a}) + C $\\
+			$ \int \frac{1}{\sqrt{a^2 + x^2}} \xder = \ln |x + \sqrt{a^2 + x^2}| + C = arg \sinh (\frac{x}{a}) + C $\\
+			$ \int \frac{1}{\sqrt{a^2 - x^2}} \xder = \ln |x + \sqrt{x^2 - a^2}| + C = arg \cosh (\frac{x}{a}) + C $\\
+			$ \int \frac{-1}{x \sqrt{x^2 - 1}} \xder = \arccsc x + C $\\
+			$ \int \frac{1}{\sqrt{a^2 - x^2}} \xder = \arcsin \frac{x}{a} + C $\\
+			$ \int \frac{-1}{\sqrt{a^2 - x^2}} \xder = \arccos \frac{x}{a} + C $\\
+			$ \int \frac{1}{x\sqrt{x^2 - 1}} \xder = \arcsec x + C $\\
+
+			\subsection{Propietateak}
+				$\int f(x) \, \mathrm{d}x = k \int f(x) dx \quad \forall k \in \Re$
+		\subsection{Zatikako integrazioa}
+		\subsection{Bigarren graduko trinomio bat daukaten funtzioak}
+		\subsection{Funtzio arrazionalen integrazioa}
+		\subsection{Integral trigonometrikoak}
+		\subsection{Integral hiperbolikoak}
+		\subsection{Integral arrazionalak}
+\end{document}

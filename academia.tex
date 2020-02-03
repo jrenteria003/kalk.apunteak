@@ -1,0 +1,63 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{mathtools}
+
+\DeclareMathOperator{\xder}{\, \mathrm{d}x}
+\DeclareMathOperator{\tder}{\, \mathrm{d}t}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\argsh}{argsh}
+\DeclareMathOperator{\argch}{argch}
+\DeclareMathOperator{\argth}{argth}
+
+\begin{document}
+	\section{Métodos de Integración}
+		\subsection{Cambio de variable}
+			$ \int f(x) \xder = \Big{/}
+				\begin{array}{c}
+					x = \phi (t) \\
+					dx = \phi'(t) \tder
+				\end{array}
+				\Big{/}
+				= \int f(\phi(t)) \phi' (t) \tder =
+				\int g(t) \tder = G (t) + C = G (\phi^{-1} (x)) + C
+			$
+		\subsection{Por partes}
+			$ \int u \, dv = uv - \int v \, du $
+
+			\subsubsection{$ \int R (Pm(x), e^x) \xder$}
+				$ u = Pm(x) $ \quad 
+				Ej: $ \int (2x + 1) e^x \xder $
+			\subsubsection{$ \int R (Pm(x), \cos ax, \sin bx) \xder $}
+				$ u = Pm(x) $ \quad
+				Ej: $ \int (2x + 1) \cos x \xder $
+			\subsubsection{$ \int R (e^{\alpha x}, \sin ax, \cos bx) \xder $}
+				$ u = e^{\alpha x} $ ó $ u = \sin ax, \cos bx $ \quad
+				Ej: $ \int e^x \cos x \xder $
+
+				Éste tipo se hace dos veces por partes, podemos llamar 
+				\textit{u} a la exponencial o ala trigonométrica, pero la
+				segunda vez estamos obligadxs a elegir lo mismo. Si está bien
+				hecha al hacer por partes la segunda vez, nos vuelve a salir
+				la del enunciado.
+			\subsubsection{$ \int (\ln, \arcsin, \arccos, \arctan, \argsh, \argch, \argth ) \xder $}
+				$ ( \dots ) = u $
+		\subsection{Racionales}
+			$ \int \frac{P(x)}{Q(x)} \xder =
+				\Big{/}
+					asdf
+				\Big{/}
+				= \int [ C(x) + \frac{R(x)}{Q(x)} ] \xder =
+				\int C(x) \xder + \int \frac{R(x)}{Q(x)} \xder \leftarrow \text{Pasos} $
+
+				Pasos
+			\begin{enumerate}
+				\item factorizar Q(x): $ Q(x) = 0 \rightarrow
+					\big{ \{ } 
+						x = a, 
+						x = b, 
+						\dots,
+						x = n 
+					\big{ \} } $
+				\item descomponer en 
+			\end{enumerate}
+\end{document}

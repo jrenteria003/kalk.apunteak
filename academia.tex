@@ -51,13 +51,92 @@
 
 				Pasos
 			\begin{enumerate}
-				\item factorizar Q(x): $ Q(x) = 0 \rightarrow
+				\item factorizar Q(x): $ Q(x) = 0 \Rightarrow
 					\big{ \{ } 
 						x = a, 
 						x = b, 
 						\dots,
 						x = n 
 					\big{ \} } $
-				\item descomponer en 
+				\item descomponer $ \frac{R(x)}{Q(x)} $ en fracciones simples:
+					\begin{itemize}
+						\item $ \frac{R(x)}{Q(x)} = \frac{A}{x-a} + \frac{B}{x-b}
+							+ \dots + \frac{N}{x-n}
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{ %} don't tell your editor about this!
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow \text{A, B, } \dots \text{N}$
+
+						\item Soluciones Reales Múltiples: $ Q(x) = (x-a)^p (x-b)^q $
+							$ \frac{P(x)}{Q(x)} = \frac{A_1}{x-a} +
+							\frac{A_2}{(x-a)^2} + \frac{A_3}{(x-a)^3} + \dots +
+							\frac{A_p}{(x-a)^p} + \frac{B_1}{(x-b)} + \dots +
+							\frac{B_q}{(x-b)^q} 
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow 
+							\begin{array}{l}
+								A_1, A_2, \dots A_p\\
+								B_1, B_2, \dots A_q
+							\end{array}$
+
+						\item Soluciones Imaginarias Simples: $ Q(x) = \dots (a x^2 + b x + c) $
+							$ \frac{R(x)}{Q(x)} = \dots +
+							\frac{Mx + N}{a x^2 + b x + c}
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow M, N $
+						\item Soluciones Imaginarias Múltiples $ \Rightarrow $ \underline{Hermite}
+					\end{itemize} 
+
+				\item Integrar las fracciones simples
+					\begin{itemize}
+						\item S.R.S: $ \Rightarrow \int \frac{1}{x-a} \xder = \ln |x-a| + C $
+							% SRS xd
+						\item S.R.M: $ \Rightarrow \int \frac{1}{(x-a)^n} \xder = \frac{(x-a)^{-n+1}}{-n+1} + C $
+						\item S.I.S: $ \Rightarrow \int \frac{Mx+N}{a x^2 + b x + c} \xder = $
+					\end{itemize}
+
 			\end{enumerate}
 \end{document}

@@ -1,4 +1,5 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[8pt]{article}
+\usepackage[a4paper,margin=2cm]{geometry}
 \usepackage{mathtools}
 
 \DeclareMathOperator{\xder}{\, \mathrm{d}x}
@@ -52,12 +53,12 @@
 				Pasos
 			\begin{enumerate}
 				\item factorizar Q(x): $ Q(x) = 0 \Rightarrow
-					\big{ \{ } 
+					\Bigg{ \{ } 
 						x = a, 
 						x = b, 
 						\dots,
 						x = n 
-					\big{ \} } $
+					\Bigg{ \} } $
 				\item descomponer $ \frac{R(x)}{Q(x)} $ en fracciones simples:
 					\begin{itemize}
 						\item $ \frac{R(x)}{Q(x)} = \frac{A}{x-a} + \frac{B}{x-b}
@@ -139,4 +140,47 @@
 					\end{itemize}
 
 			\end{enumerate}
+		\subsubsection{Hermite S.I.M}
+			$ \int \frac{P(x)}{Q(x)} \xder = \frac{p_2 (x)}{q_2 (x)} + \int \frac{p_1 (x)}{q_1 (x)} \xder $
+
+			$ q_1 (x) $ : polinomio formado por los factores de $ Q(x) $ elevados a uno
+
+			$ p_1 (x) $ : polinomio completo de coeficientes indeterminados y de grado uno menos que $ q_1 (x) $
+
+			$ q_2 (x) $ : $ \frac{Q(x)}{q_1 (x)} $
+
+			$ p_2 (x) $ : polinomio completo de coeficientes indeterminados y de grado uno menos que $ q_2 (x) $
+
+			$ \frac{d}{\xder} \Rightarrow \frac{P(x)}{Q(x)} = \frac{d}{\xder} 
+				\Big[ \frac{p_2 (x)}{q_2 (x)} \Big] + \frac{p_1 (x)}{q_2 (x)}
+				\begin{array}{c}
+					\text{Común}\\
+					\Rightarrow\\
+					\text{denominador}
+				\end{array}
+				\Bigg \{
+				\begin{array}{c}
+					\text{Identificar}\\
+					\text{ó}\\
+					\text{dar valores}
+				\end{array}
+				\Rightarrow
+				\begin{array}{c}
+					\text{Resolver}\\
+					\text{el}\\
+					\text{sistema}
+				\end{array} \Rightarrow p_1 , p_2 $
+
+				$ \int \frac{p_1 (x)}{q_1 (x)} \xder \Rightarrow $ fracciones simples
+
+	\subsection{Exponenciales}
+		$ \int R (e^x) \xder $
+
+			cambio $ \Rightarrow
+			\begin{array}{c}
+				e^x = t\\
+				e^x \xder = \tder
+			\end{array}
+			\Rightarrow $ \underline{Racional}
+
 \end{document}

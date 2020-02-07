@@ -1,9 +1,10 @@
 \documentclass[8pt]{article}
-\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage[a4paper,margin=1cm]{geometry}
 \usepackage{mathtools}
 
 \DeclareMathOperator{\xder}{\, \mathrm{d}x}
 \DeclareMathOperator{\tder}{\, \mathrm{d}t}
+\DeclareMathOperator{\zder}{\, \mathrm{d}z}
 \DeclareMathOperator{\arccsc}{arccsc}
 \DeclareMathOperator{\arcsec}{arcsec}
 \DeclareMathOperator{\argsh}{argsh}
@@ -182,5 +183,67 @@
 				e^x \xder = \tder
 			\end{array}
 			\Rightarrow $ \underline{Racional}
+
+		\subsubsection{Irracionales}
+			\begin{itemize}
+				\item $ \int R (x, x^{r/s}, \dots , x^{p/q}) \xder $\\
+					cambio $ \Rightarrow x = z^{\mu},
+					\mu = \text{M.C.M} (s, \dots, q) \Rightarrow Racional $
+				\item $ \int R (x, (\frac{ax+b}{cx+d})^{r/s}, \dots, 
+					(\frac{ax+b}{cx+d})^{p/q}) \xder $\\
+					cambio $ \Rightarrow (\frac{ax+b}{cx+d}) = z^{\mu},
+					\mu = \text{M.C.M} (s, \dots, q) \Rightarrow Racional $
+				\item Cambio trigonométrico o hiperbólico:\\
+					$ \sqrt{a^2 - [f(x)]^2} \Rightarrow f(x) = a \sin t $\\
+					$ \sqrt{[f(x)]^2 - a^2} \Rightarrow f(x) = a \cosh t $\\
+					$ \sqrt{[f(x)]^2 + a^2} \Rightarrow f(x) = a \sinh t $
+				\item Casos particulares:
+					\begin{enumerate}
+						\item Método Alemán:
+							$ \int \frac{P(x)}{\sqrt{a x^2 + bx + c}} \xder =
+							q(x) \sqrt{a x^2 + bx + c} + k \int \frac{\xder}{\sqrt{a x^2 + bx + c}} $\\
+
+							$ q(x) $: polinomio completo de coeficientes indeterminados y
+							de grado uno menos que $ P(x) $\\
+							$ k $: constante
+								
+							$ \frac{\mathrm{d}}{\xder} \Rightarrow 
+							\frac{P(x)}{\sqrt{a x^2 + bx + c}} = 
+							\frac{\mathrm{d}}{\xder}
+							[q(x) \sqrt{a x^2 + bx + c} + \frac{k}{\sqrt{a x^2 + bx + c}}
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow q(x), k $
+							$ \quad \int \frac{\xder}{\sqrt{a x^2 + bx + c}}
+							\Rightarrow
+							\begin{array}{c}
+								\arcsin\\
+								\argsh\\
+								\argch
+							\end{array} $
+						\item Segundo caso particular:
+							$ \int \frac{\xder}{(x - \alpha)^n \sqrt{a x^2 + bx + c}} $\\
+							cambio $ \Rightarrow 
+							\begin{array}{c}
+								x - \alpha = \frac{1}{z}\\
+								\xder = \frac{-1}{z^2} \zder
+							\end{array}
+							\Rightarrow $ \underline{Racional}
+					\end{enumerate}
+			\end{itemize}
 
 \end{document}

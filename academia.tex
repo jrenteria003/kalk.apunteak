@@ -246,4 +246,52 @@
 					\end{enumerate}
 			\end{itemize}
 
+		\subsubsection{Binomia: $ \int x^m (a + b x^n)^p \xder $}
+			\begin{enumerate}
+				\item $ p \in \Z \Rightarrow $ 
+					\underline{Irracional tipo 1}
+					$ \Rightarrow $
+					\underline{Racional}
+				\item $ \frac{m+1}{n} \in \Z \Rightarrow 
+					\begin{array}{c}
+						x^n = t\\
+						x = t^{\frac{1}{n}}\\
+						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+					\end{array} \Rightarrow
+					\int t^{\frac{m}{n} (a + bt)^p \frac{1}{n}
+					t^{\frac{1}{n}-1} \tder = 
+					\frac{1}{n} \int t^{\frac{m+1}{n}-1}
+					(a + bt)^p \tder =
+					\Big/
+					\begin{array}{c}
+						a + bt = z\\
+						b \tder = \zder
+					\end{array} 
+					\Big/ = 
+					\frac{1}{nb} \int (\frac{z-a}{b})^{\frac{m+1}{n}-1}
+					z^p \zder \Rightarrow $
+					\underline{Irracional tipo 1} 
+					$ \Rightarrow $
+					\underline{Racional}
+				\item $ \frac{m+1}{n} + p \in \Z \Rightarrow
+					\begin{array}{(c)}
+						x^n = t\\
+						x = t^{\frac{1}{n}}\\
+						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+					\end{array} \Rightarrow
+					\int t^{\frac{m}{n}} (a + bt)^p \frac{1}{n}
+					t^{\frac{1}{n}-1} \tder = \frac{1}{n}
+					\int t^{\frac{m+1}{n}-1} (a + bt)^p
+					\frac{t^p}{t^p} \tder = \frac{1}{n}
+					\int t^{\frac{m+1}{n}-1+p}
+					(\frac{a + bt}{t})^p \tder \Rightarrow
+					\Big/
+					\begin{array}{c}
+						\frac{a + bt}{t} = z\\
+						\frac{-a}{t^2} \tder = \zder
+					\end{array} \Big/
+					$ \underline{Irracional tipo 1}
+					$ \Rightarrow $ \underline{Racional}
+			\end{enumerate}
+
 \end{document}

@@ -1,0 +1,301 @@
+\documentclass[8pt]{article}
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{mathtools}
+
+\DeclareMathOperator{\xder}{\, \mathrm{d}x}
+\DeclareMathOperator{\tder}{\, \mathrm{d}t}
+\DeclareMathOperator{\zder}{\, \mathrm{d}z}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\argsh}{argsh}
+\DeclareMathOperator{\argch}{argch}
+\DeclareMathOperator{\argth}{argth}
+
+\begin{document}
+	\section{Métodos de Integración}
+		\subsection{Cambio de variable}
+			$ \int f(x) \xder = \Big{/}
+				\begin{array}{c}
+					x = \phi (t) \\
+					dx = \phi'(t) \tder
+				\end{array}
+				\Big{/}
+				= \int f(\phi(t)) \phi' (t) \tder =
+				\int g(t) \tder = G (t) + C = G (\phi^{-1} (x)) + C
+			$
+		\subsection{Por partes}
+			$ \int u \, dv = uv - \int v \, du $
+
+			\subsubsection{$ \int R (Pm(x), e^x) \xder$}
+				$ u = Pm(x) $ \quad 
+				Ej: $ \int (2x + 1) e^x \xder $
+			\subsubsection{$ \int R (Pm(x), \cos ax, \sin bx) \xder $}
+				$ u = Pm(x) $ \quad
+				Ej: $ \int (2x + 1) \cos x \xder $
+			\subsubsection{$ \int R (e^{\alpha x}, \sin ax, \cos bx) \xder $}
+				$ u = e^{\alpha x} $ ó $ u = \sin ax, \cos bx $ \quad
+				Ej: $ \int e^x \cos x \xder $
+
+				Éste tipo se hace dos veces por partes, podemos llamar 
+				\textit{u} a la exponencial o ala trigonométrica, pero la
+				segunda vez estamos obligadxs a elegir lo mismo. Si está bien
+				hecha al hacer por partes la segunda vez, nos vuelve a salir
+				la del enunciado.
+			\subsubsection{$ \int (\ln, \arcsin, \arccos, \arctan, \argsh, \argch, \argth ) \xder $}
+				$ ( \dots ) = u $
+		\subsection{Racionales}
+			$ \int \frac{P(x)}{Q(x)} \xder =
+				\Big{/}
+					asdf
+				\Big{/}
+				= \int [ C(x) + \frac{R(x)}{Q(x)} ] \xder =
+				\int C(x) \xder + \int \frac{R(x)}{Q(x)} \xder \leftarrow \text{Pasos} $
+
+				Pasos
+			\begin{enumerate}
+				\item factorizar Q(x): $ Q(x) = 0 \Rightarrow
+					\Bigg{ \{ } 
+						x = a, 
+						x = b, 
+						\dots,
+						x = n 
+					\Bigg{ \} } $
+				\item descomponer $ \frac{R(x)}{Q(x)} $ en fracciones simples:
+					\begin{itemize}
+						\item $ \frac{R(x)}{Q(x)} = \frac{A}{x-a} + \frac{B}{x-b}
+							+ \dots + \frac{N}{x-n}
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{ %} don't tell your editor about this!
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow \text{A, B, } \dots \text{N}$
+
+						\item Soluciones Reales Múltiples: $ Q(x) = (x-a)^p (x-b)^q $
+							$ \frac{P(x)}{Q(x)} = \frac{A_1}{x-a} +
+							\frac{A_2}{(x-a)^2} + \frac{A_3}{(x-a)^3} + \dots +
+							\frac{A_p}{(x-a)^p} + \frac{B_1}{(x-b)} + \dots +
+							\frac{B_q}{(x-b)^q} 
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow 
+							\begin{array}{l}
+								A_1, A_2, \dots A_p\\
+								B_1, B_2, \dots A_q
+							\end{array}$
+
+						\item Soluciones Imaginarias Simples: $ Q(x) = \dots (a x^2 + b x + c) $
+							$ \frac{R(x)}{Q(x)} = \dots +
+							\frac{Mx + N}{a x^2 + b x + c}
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow M, N $
+						\item Soluciones Imaginarias Múltiples $ \Rightarrow $ \underline{Hermite}
+					\end{itemize} 
+
+				\item Integrar las fracciones simples
+					\begin{itemize}
+						\item S.R.S: $ \Rightarrow \int \frac{1}{x-a} \xder = \ln |x-a| + C $
+							% SRS xd
+						\item S.R.M: $ \Rightarrow \int \frac{1}{(x-a)^n} \xder = \frac{(x-a)^{-n+1}}{-n+1} + C $
+						\item S.I.S: $ \Rightarrow \int \frac{Mx+N}{a x^2 + b x + c} \xder = $
+					\end{itemize}
+
+			\end{enumerate}
+		\subsubsection{Hermite S.I.M}
+			$ \int \frac{P(x)}{Q(x)} \xder = \frac{p_2 (x)}{q_2 (x)} + \int \frac{p_1 (x)}{q_1 (x)} \xder $
+
+			$ q_1 (x) $ : polinomio formado por los factores de $ Q(x) $ elevados a uno
+
+			$ p_1 (x) $ : polinomio completo de coeficientes indeterminados y de grado uno menos que $ q_1 (x) $
+
+			$ q_2 (x) $ : $ \frac{Q(x)}{q_1 (x)} $
+
+			$ p_2 (x) $ : polinomio completo de coeficientes indeterminados y de grado uno menos que $ q_2 (x) $
+
+			$ \frac{d}{\xder} \Rightarrow \frac{P(x)}{Q(x)} = \frac{d}{\xder} 
+				\Big[ \frac{p_2 (x)}{q_2 (x)} \Big] + \frac{p_1 (x)}{q_2 (x)}
+				\begin{array}{c}
+					\text{Común}\\
+					\Rightarrow\\
+					\text{denominador}
+				\end{array}
+				\Bigg \{
+				\begin{array}{c}
+					\text{Identificar}\\
+					\text{ó}\\
+					\text{dar valores}
+				\end{array}
+				\Rightarrow
+				\begin{array}{c}
+					\text{Resolver}\\
+					\text{el}\\
+					\text{sistema}
+				\end{array} \Rightarrow p_1 , p_2 $
+
+				$ \int \frac{p_1 (x)}{q_1 (x)} \xder \Rightarrow $ fracciones simples
+
+	\subsection{Exponenciales}
+		$ \int R (e^x) \xder $
+
+			cambio $ \Rightarrow
+			\begin{array}{c}
+				e^x = t\\
+				e^x \xder = \tder
+			\end{array}
+			\Rightarrow $ \underline{Racional}
+
+		\subsubsection{Irracionales}
+			\begin{itemize}
+				\item $ \int R (x, x^{r/s}, \dots , x^{p/q}) \xder $\\
+					cambio $ \Rightarrow x = z^{\mu},
+					\mu = \text{M.C.M} (s, \dots, q) \Rightarrow Racional $
+				\item $ \int R (x, (\frac{ax+b}{cx+d})^{r/s}, \dots, 
+					(\frac{ax+b}{cx+d})^{p/q}) \xder $\\
+					cambio $ \Rightarrow (\frac{ax+b}{cx+d}) = z^{\mu},
+					\mu = \text{M.C.M} (s, \dots, q) \Rightarrow Racional $
+				\item Cambio trigonométrico o hiperbólico:\\
+					$ \sqrt{a^2 - [f(x)]^2} \Rightarrow f(x) = a \sin t $\\
+					$ \sqrt{[f(x)]^2 - a^2} \Rightarrow f(x) = a \cosh t $\\
+					$ \sqrt{[f(x)]^2 + a^2} \Rightarrow f(x) = a \sinh t $
+				\item Casos particulares:
+					\begin{enumerate}
+						\item Método Alemán:
+							$ \int \frac{P(x)}{\sqrt{a x^2 + bx + c}} \xder =
+							q(x) \sqrt{a x^2 + bx + c} + k \int \frac{\xder}{\sqrt{a x^2 + bx + c}} $\\
+
+							$ q(x) $: polinomio completo de coeficientes indeterminados y
+							de grado uno menos que $ P(x) $\\
+							$ k $: constante
+								
+							$ \frac{\mathrm{d}}{\xder} \Rightarrow 
+							\frac{P(x)}{\sqrt{a x^2 + bx + c}} = 
+							\frac{\mathrm{d}}{\xder}
+							[q(x) \sqrt{a x^2 + bx + c} + \frac{k}{\sqrt{a x^2 + bx + c}}
+							\begin{array}{c}
+								\text{Común}\\
+								\Rightarrow\\
+								\text{denominador}
+							\end{array}
+							\Bigg \{
+							\begin{array}{c}
+								\text{Identificar}\\
+								\text{ó}\\
+								\text{dar valores}
+							\end{array}
+							\Rightarrow
+							\begin{array}{c}
+								\text{Resolver}\\
+								\text{el}\\
+								\text{sistema}
+							\end{array} \Rightarrow q(x), k $
+							$ \quad \int \frac{\xder}{\sqrt{a x^2 + bx + c}}
+							\Rightarrow
+							\begin{array}{c}
+								\arcsin\\
+								\argsh\\
+								\argch
+							\end{array} $
+						\item Segundo caso particular:
+							$ \int \frac{\xder}{(x - \alpha)^n \sqrt{a x^2 + bx + c}} $\\
+							cambio $ \Rightarrow 
+							\begin{array}{c}
+								x - \alpha = \frac{1}{z}\\
+								\xder = \frac{-1}{z^2} \zder
+							\end{array}
+							\Rightarrow $ \underline{Racional}
+					\end{enumerate}
+			\end{itemize}
+
+		\subsubsection{Binomia: $ \int x^m (a + b x^n)^p \xder $}
+			\begin{enumerate}
+				\item $ p \in \Z \Rightarrow $ 
+					\underline{Irracional tipo 1}
+					$ \Rightarrow $
+					\underline{Racional}
+				\item $ \frac{m+1}{n} \in \Z \Rightarrow 
+					\begin{array}{c}
+						x^n = t\\
+						x = t^{\frac{1}{n}}\\
+						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+					\end{array} \Rightarrow
+					\int t^{\frac{m}{n} (a + bt)^p \frac{1}{n}
+					t^{\frac{1}{n}-1} \tder = 
+					\frac{1}{n} \int t^{\frac{m+1}{n}-1}
+					(a + bt)^p \tder =
+					\Big/
+					\begin{array}{c}
+						a + bt = z\\
+						b \tder = \zder
+					\end{array} 
+					\Big/ = 
+					\frac{1}{nb} \int (\frac{z-a}{b})^{\frac{m+1}{n}-1}
+					z^p \zder \Rightarrow $
+					\underline{Irracional tipo 1} 
+					$ \Rightarrow $
+					\underline{Racional}
+				\item $ \frac{m+1}{n} + p \in \Z \Rightarrow
+					\begin{array}{(c)}
+						x^n = t\\
+						x = t^{\frac{1}{n}}\\
+						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+					\end{array} \Rightarrow
+					\int t^{\frac{m}{n}} (a + bt)^p \frac{1}{n}
+					t^{\frac{1}{n}-1} \tder = \frac{1}{n}
+					\int t^{\frac{m+1}{n}-1} (a + bt)^p
+					\frac{t^p}{t^p} \tder = \frac{1}{n}
+					\int t^{\frac{m+1}{n}-1+p}
+					(\frac{a + bt}{t})^p \tder \Rightarrow
+					\Big/
+					\begin{array}{c}
+						\frac{a + bt}{t} = z\\
+						\frac{-a}{t^2} \tder = \zder
+					\end{array} \Big/
+					$ \underline{Irracional tipo 1}
+					$ \Rightarrow $ \underline{Racional}
+			\end{enumerate}
+
+	\section{Integral Definida}
+		\subsection{Regla de Barrow}
+			$ \int_a_b f(x) \xder = [f(x)]{_a ^b} = f(b) - f(a) $
+
+\end{document}

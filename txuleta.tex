@@ -12,7 +12,7 @@
 \DeclareMathOperator{\argth}{argth}
 
 \begin{document}
-	\section{Métodos de Integración}
+	\section{Integrazio metodoak}
 		\subsection{Aldagai aldaketa}
 			$ \int f(x) \xder = \Big{/}
 				\begin{array}{c}
@@ -80,7 +80,6 @@
 								\text{ebatzi}
 							\end{array} \Rightarrow \text{A, B, } \dots \text{N}$
 
-						%???\item Soluzio Erreal Konplexsuak: $ Q(x) = (x-a)^p (x-b)^q $
 						\item Soluzio Erreal Anitzak: $ Q(x) = (x-a)^p (x-b)^q $
 							$ \frac{P(x)}{Q(x)} = \frac{A_1}{x-a} +
 							\frac{A_2}{(x-a)^2} + \frac{A_3}{(x-a)^3} + \dots +
@@ -141,13 +140,13 @@
 		\subsubsection{Hermite S.I.A}
 			$ \int \frac{P(x)}{Q(x)} \xder = \frac{p_2 (x)}{q_2 (x)} + \int \frac{p_1 (x)}{q_1 (x)} \xder $
 
-			$ q_1 (x) $ : polinomio formado por los factores de $ Q(x) $ elevados a uno
+			$ q_1 (x) $ : $ Q(x)$ren faktoreak osatutako polinomioa
 
-			$ p_1 (x) $ : polinomio completo de coeficientes indeterminados y de grado uno menos que $ q_1 (x) $
+			$ p_1 (x) $ : $ q_1 $ baino gradu bat txikiagoak diren koefiziente indeterminatuen polinomioa
 
 			$ q_2 (x) $ : $ \frac{Q(x)}{q_1 (x)} $
 
-			$ p_2 (x) $ : polinomio completo de coeficientes indeterminados y de grado uno menos que $ q_2 (x) $
+			$ p_2 (x) $ : $ q_2 $ baino gradu bat txikiagoak diren koefiziente indeterminatuen polinomioa
 
 			$ \frac{d}{\xder} \Rightarrow \frac{P(x)}{Q(x)} = \frac{d}{\xder} 
 				\Big[ \frac{p_2 (x)}{q_2 (x)} \Big] + \frac{p_1 (x)}{q_2 (x)}
@@ -180,7 +179,7 @@
 			\end{array}
 			\Rightarrow $ \underline{Arrazionala}
 
-		\subsubsection{Irracionalak}
+		\subsubsection{Irrazionalak}
 			\begin{itemize}
 				\item $ \int R (x, x^{r/s}, \dots , x^{p/q}) \xder $\\
 					aldaketa $ \Rightarrow x = z^{\mu},
@@ -199,9 +198,9 @@
 							$ \int \frac{P(x)}{\sqrt{a x^2 + bx + c}} \xder =
 							q(x) \sqrt{a x^2 + bx + c} + k \int \frac{\xder}{\sqrt{a x^2 + bx + c}} $\\
 
-							$ q(x) $: polinomio completo de coeficientes indeterminados y
-							de grado uno menos que $ P(x) $\\
-							$ k $: constante
+							$ q(x) $: $ P(x) $ baino gradu bat txikiagoak diren
+							koefiziente indeterminatuen polinomioa\\
+							$ k $: konstantea
 								
 							$ \frac{\mathrm{d}}{\xder} \Rightarrow 
 							\frac{P(x)}{\sqrt{a x^2 + bx + c}} = 
@@ -241,11 +240,11 @@
 					\end{enumerate}
 			\end{itemize}
 
-		\subsubsection{Binomia: $ \int x^m (a + b x^n)^p \xder $}
+		\subsubsection{Binomia: $ \int x^m {(a + b x^n)}^{p} \xder $}
 			\begin{enumerate}
-				\item $ p \in \Z \Rightarrow $ 
-					\underline{Lehenengo motako irrazionala}
-					$ \Rightarrow $
+				\item $ p \in \Z \Rightarrow  
+					\text{\underline{Lehenengo motako irrazionala}}
+					 \Rightarrow $
 					\underline{Arrazionala}
 				\item $ \frac{m+1}{n} \in \Z \Rightarrow 
 					\begin{array}{c}

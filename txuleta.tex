@@ -1,6 +1,7 @@
 \documentclass[8pt]{article}
 \usepackage[a4paper,margin=1cm]{geometry}
 \usepackage{mathtools}
+\setlength{\parindent}{0cm} % Default is 15pt.
 
 \DeclareMathOperator{\xder}{\, \mathrm{d}x}
 \DeclareMathOperator{\tder}{\, \mathrm{d}t}
@@ -242,17 +243,17 @@
 
 	\subsection{Binomia: $ \int x^m {(a + b x^n)}^{p} \xder $}
 		\begin{enumerate}
-			\item $ p \in \Z \Rightarrow  
+			\item $ p \in Z \Rightarrow  
 				\text{\underline{Lehenengo motako irrazionala}}
 				 \Rightarrow $
 				\underline{Arrazionala}
-			\item $ \frac{m+1}{n} \in \Z \Rightarrow 
+			\item $ \frac{m+1}{n} \in Z \Rightarrow 
 				\begin{array}{c}
 					x^n = t\\
 					x = t^{\frac{1}{n}}\\
 					\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
 				\end{array} \Rightarrow
-				\int t^{\frac{m}{n} (a + bt)^p \frac{1}{n}
+				\int t^{\frac{m}{n}} (a + bt)^p \frac{1}{n}
 				t^{\frac{1}{n}-1} \tder = 
 				\frac{1}{n} \int t^{\frac{m+1}{n}-1}
 				(a + bt)^p \tder =
@@ -267,8 +268,8 @@
 				\underline{Lehenengo motako irrazionala} 
 				$ \Rightarrow $
 				\underline{Arrazionala}
-			\item $ \frac{m+1}{n} + p \in \Z \Rightarrow
-				\begin{array}{(c)}
+			\item $ \frac{m+1}{n} + p \in Z \Rightarrow
+				\begin{array}{c}
 					x^n = t\\
 					x = t^{\frac{1}{n}}\\
 					\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
@@ -289,9 +290,71 @@
 		\end{enumerate}
 
 	\subsection{Trigonometrikoak}
+		\subsubsection{$\int R(\sin x, \cos x) \xder $}
+			Mota hau \textit{sin}ua edo \textit{cos}inua zatitzailean\\
+			daudenean erabiltzen da, haien potentzien arabera:
+
+			$ \text{(bikoitia):} \tan x = t \quad
+				\left\{
+				\begin{array}{c}
+					\xder = \frac{\tder}{1+{t}^{2}}\\
+					\sin x = \frac{t}{\sqrt{1+{t}^{2}}}\\
+					\cos x = \frac{1}{1+{t}^{2}}
+				\end{array}
+				\right.
+			$ \quad
+			$ \text{(bakoitia):} \tan \frac{x}{2} = t \quad
+				\left\{
+				\begin{array}{c}
+					\xder = \frac{2\tder}{1+{t}^{2}}\\
+					\sin x = \frac{2t}{1+{t}^{2}}\\
+					\cos x = \frac{1-{t}^{2}}{1+{t}^{2}}
+				\end{array}
+				\right.
+			$
+		\subsubsection{$\int R(\tan x) \xder $}
+			aldaketa
+			$ \left/ \begin{array}{c}
+				\tan x = t\\
+				\xder = \frac{\tder}{1+{t}^{2}}
+			\end{array} \right/ \Rightarrow $ \underline{Arrazionala}
+
+		\subsubsection{$\int \sin^{m} x \times \cos^{n} x \xder$}
+			\begin{itemize}
+				\item $ m \quad \text{bakoitia} \Rightarrow \cos x = t $
+				\item $ n \quad \text{bakoitia} \Rightarrow \sin x = t $
+				\item $ 
+					\left.
+					\begin{array}{c}
+						m\\
+						n
+					\end{array}  \right\} \text{bakoitia} \Rightarrow
+					\cos x = t \quad \text{edo}\quad\sin x = t $
+				\item $
+					\left.
+					\begin{array}{c}
+						m\\
+						n
+					\end{array} \right\} \text{bikoitia} \Rightarrow
+						\begin{array}{c}
+							\cos^{2} x = \frac{1+\cos 2x}{2}\\
+							\sin^{2} x = \frac{1-\cos 2x}{2}
+						\end{array} $
+			\end{itemize}
+
+		\subsubsection{}
+
+			$ \int \cos (mx) \cos (nx) \xder = \frac{1}{2}
+					\int [ \cos (mx + nx) + \cos (mx - nx) ] \xder $
+
+			$ \int \sin (mx) \sin (nx) \xder = \frac{1}{2}
+					\int [-\cos (mx + nx) + \cos (mx - nx) ] \xder $
+
+			$ \int \cos (mx) \sin (nx) \xder = \frac{1}{2}
+					\int [ \sin (nx + mx) + \sin (nx - mx) ] \xder $
 
 \section{Integral Mugatua}
 	\subsection{Barrowren erregela}
-		$ \int_a^b f(x) \xder = [f(x)]{_a ^b} = f(b) - f(a) $
+		$ \int_a^b f(x) \xder = [f(x)]{_a^b} = f(b) - f(a) $
 
 \end{document}

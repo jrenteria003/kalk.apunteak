@@ -179,117 +179,119 @@
 			\end{array}
 			\Rightarrow $ \underline{Arrazionala}
 
-		\subsubsection{Irrazionalak}
-			\begin{itemize}
-				\item $ \int R (x, x^{r/s}, \dots , x^{p/q}) \xder $\\
-					aldaketa $ \Rightarrow x = z^{\mu},
-					\mu = \text{M.C.M} (s, \dots, q) \Rightarrow Arrazionala $
-				\item $ \int R (x, (\frac{ax+b}{cx+d})^{r/s}, \dots, 
-					(\frac{ax+b}{cx+d})^{p/q}) \xder $\\
-					aldaketa $ \Rightarrow (\frac{ax+b}{cx+d}) = z^{\mu},
-					\mu = \text{MKT} (s, \dots, q) \Rightarrow Racional $
-				\item aldaketa trigonometrikoa edo hiperbolikoa:\\
-					$ \sqrt{a^2 - [f(x)]^2} \Rightarrow f(x) = a \sin t $\\
-					$ \sqrt{[f(x)]^2 - a^2} \Rightarrow f(x) = a \cosh t $\\
-					$ \sqrt{[f(x)]^2 + a^2} \Rightarrow f(x) = a \sinh t $
-				\item kasu bereziak:
-					\begin{enumerate}
-						\item Metodo Alemaniarra:
-							$ \int \frac{P(x)}{\sqrt{a x^2 + bx + c}} \xder =
-							q(x) \sqrt{a x^2 + bx + c} + k \int \frac{\xder}{\sqrt{a x^2 + bx + c}} $\\
+	\subsection{Irrazionalak}
+		\begin{itemize}
+			\item $ \int R (x, x^{r/s}, \dots , x^{p/q}) \xder $\\
+				aldaketa $ \Rightarrow x = z^{\mu},
+				\mu = \text{M.C.M} (s, \dots, q) \Rightarrow Arrazionala $
+			\item $ \int R (x, (\frac{ax+b}{cx+d})^{r/s}, \dots, 
+				(\frac{ax+b}{cx+d})^{p/q}) \xder $\\
+				aldaketa $ \Rightarrow (\frac{ax+b}{cx+d}) = z^{\mu},
+				\mu = \text{MKT} (s, \dots, q) \Rightarrow Racional $
+			\item aldaketa trigonometrikoa edo hiperbolikoa:\\
+				$ \sqrt{a^2 - [f(x)]^2} \Rightarrow f(x) = a \sin t $\\
+				$ \sqrt{[f(x)]^2 - a^2} \Rightarrow f(x) = a \cosh t $\\
+				$ \sqrt{[f(x)]^2 + a^2} \Rightarrow f(x) = a \sinh t $
+			\item kasu bereziak:
+				\begin{enumerate}
+					\item Metodo Alemaniarra:
+						$ \int \frac{P(x)}{\sqrt{a x^2 + bx + c}} \xder =
+						q(x) \sqrt{a x^2 + bx + c} + k \int \frac{\xder}{\sqrt{a x^2 + bx + c}} $\\
 
-							$ q(x) $: $ P(x) $ baino gradu bat txikiagoak diren
-							koefiziente indeterminatuen polinomioa\\
-							$ k $: konstantea
-								
-							$ \frac{\mathrm{d}}{\xder} \Rightarrow 
-							\frac{P(x)}{\sqrt{a x^2 + bx + c}} = 
-							\frac{\mathrm{d}}{\xder}
-							[q(x) \sqrt{a x^2 + bx + c} + \frac{k}{\sqrt{a x^2 + bx + c}}
-							\begin{array}{c}
-								\text{Zatitzaile}\\
-								\Rightarrow\\
-								\text{komuna}
-							\end{array}
-							\Bigg \{
-							\begin{array}{c}
-								\text{Identifikatu}\\
-								\text{edo}\\
-								\text{balioak eman}
-							\end{array}
-							\Rightarrow
-							\begin{array}{c}
-								\text{Sistema}\\
-								\text{ebatzi}
-							\end{array} \Rightarrow q(x), k $
-							$ \quad \int \frac{\xder}{\sqrt{a x^2 + bx + c}}
-							\Rightarrow
-							\begin{array}{c}
-								\arcsin\\
-								\argsh\\
-								\argch
-							\end{array} $
-						\item Bigarren kasu berezia:
-							$ \int \frac{\xder}{(x - \alpha)^n \sqrt{a x^2 + bx + c}} $\\
-							aldaketa $ \Rightarrow 
-							\begin{array}{c}
-								x - \alpha = \frac{1}{z}\\
-								\xder = \frac{-1}{z^2} \zder
-							\end{array}
-							\Rightarrow $ \underline{Arrazionala}
-					\end{enumerate}
-			\end{itemize}
+						$ q(x) $: $ P(x) $ baino gradu bat txikiagoak diren
+						koefiziente indeterminatuen polinomioa\\
+						$ k $: konstantea
+							
+						$ \frac{\mathrm{d}}{\xder} \Rightarrow 
+						\frac{P(x)}{\sqrt{a x^2 + bx + c}} = 
+						\frac{\mathrm{d}}{\xder}
+						[q(x) \sqrt{a x^2 + bx + c} + \frac{k}{\sqrt{a x^2 + bx + c}}
+						\begin{array}{c}
+							\text{Zatitzaile}\\
+							\Rightarrow\\
+							\text{komuna}
+						\end{array}
+						\Bigg \{
+						\begin{array}{c}
+							\text{Identifikatu}\\
+							\text{edo}\\
+							\text{balioak eman}
+						\end{array}
+						\Rightarrow
+						\begin{array}{c}
+							\text{Sistema}\\
+							\text{ebatzi}
+						\end{array} \Rightarrow q(x), k $
+						$ \quad \int \frac{\xder}{\sqrt{a x^2 + bx + c}}
+						\Rightarrow
+						\begin{array}{c}
+							\arcsin\\
+							\argsh\\
+							\argch
+						\end{array} $
+					\item Bigarren kasu berezia:
+						$ \int \frac{\xder}{(x - \alpha)^n \sqrt{a x^2 + bx + c}} $\\
+						aldaketa $ \Rightarrow 
+						\begin{array}{c}
+							x - \alpha = \frac{1}{z}\\
+							\xder = \frac{-1}{z^2} \zder
+						\end{array}
+						\Rightarrow $ \underline{Arrazionala}
+				\end{enumerate}
+		\end{itemize}
 
-		\subsubsection{Binomia: $ \int x^m {(a + b x^n)}^{p} \xder $}
-			\begin{enumerate}
-				\item $ p \in \Z \Rightarrow  
-					\text{\underline{Lehenengo motako irrazionala}}
-					 \Rightarrow $
-					\underline{Arrazionala}
-				\item $ \frac{m+1}{n} \in \Z \Rightarrow 
-					\begin{array}{c}
-						x^n = t\\
-						x = t^{\frac{1}{n}}\\
-						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
-					\end{array} \Rightarrow
-					\int t^{\frac{m}{n} (a + bt)^p \frac{1}{n}
-					t^{\frac{1}{n}-1} \tder = 
-					\frac{1}{n} \int t^{\frac{m+1}{n}-1}
-					(a + bt)^p \tder =
-					\Big/
-					\begin{array}{c}
-						a + bt = z\\
-						b \tder = \zder
-					\end{array} 
-					\Big/ = 
-					\frac{1}{nb} \int (\frac{z-a}{b})^{\frac{m+1}{n}-1}
-					z^p \zder \Rightarrow $
-					\underline{Lehenengo motako irrazionala} 
-					$ \Rightarrow $
-					\underline{Arrazionala}
-				\item $ \frac{m+1}{n} + p \in \Z \Rightarrow
-					\begin{array}{(c)}
-						x^n = t\\
-						x = t^{\frac{1}{n}}\\
-						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
-					\end{array} \Rightarrow
-					\int t^{\frac{m}{n}} (a + bt)^p \frac{1}{n}
-					t^{\frac{1}{n}-1} \tder = \frac{1}{n}
-					\int t^{\frac{m+1}{n}-1} (a + bt)^p
-					\frac{t^p}{t^p} \tder = \frac{1}{n}
-					\int t^{\frac{m+1}{n}-1+p}
-					(\frac{a + bt}{t})^p \tder \Rightarrow
-					\Big/
-					\begin{array}{c}
-						\frac{a + bt}{t} = z\\
-						\frac{-a}{t^2} \tder = \zder
-					\end{array} \Big/
-					$ \underline{Lehenengo motako irrazionala}
-					$ \Rightarrow $ \underline{Arrazionala}
-			\end{enumerate}
+	\subsection{Binomia: $ \int x^m {(a + b x^n)}^{p} \xder $}
+		\begin{enumerate}
+			\item $ p \in \Z \Rightarrow  
+				\text{\underline{Lehenengo motako irrazionala}}
+				 \Rightarrow $
+				\underline{Arrazionala}
+			\item $ \frac{m+1}{n} \in \Z \Rightarrow 
+				\begin{array}{c}
+					x^n = t\\
+					x = t^{\frac{1}{n}}\\
+					\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+				\end{array} \Rightarrow
+				\int t^{\frac{m}{n} (a + bt)^p \frac{1}{n}
+				t^{\frac{1}{n}-1} \tder = 
+				\frac{1}{n} \int t^{\frac{m+1}{n}-1}
+				(a + bt)^p \tder =
+				\Big/
+				\begin{array}{c}
+					a + bt = z\\
+					b \tder = \zder
+				\end{array} 
+				\Big/ = 
+				\frac{1}{nb} \int (\frac{z-a}{b})^{\frac{m+1}{n}-1}
+				z^p \zder \Rightarrow $
+				\underline{Lehenengo motako irrazionala} 
+				$ \Rightarrow $
+				\underline{Arrazionala}
+			\item $ \frac{m+1}{n} + p \in \Z \Rightarrow
+				\begin{array}{(c)}
+					x^n = t\\
+					x = t^{\frac{1}{n}}\\
+					\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+				\end{array} \Rightarrow
+				\int t^{\frac{m}{n}} (a + bt)^p \frac{1}{n}
+				t^{\frac{1}{n}-1} \tder = \frac{1}{n}
+				\int t^{\frac{m+1}{n}-1} (a + bt)^p
+				\frac{t^p}{t^p} \tder = \frac{1}{n}
+				\int t^{\frac{m+1}{n}-1+p}
+				(\frac{a + bt}{t})^p \tder \Rightarrow
+				\Big/
+				\begin{array}{c}
+					\frac{a + bt}{t} = z\\
+					\frac{-a}{t^2} \tder = \zder
+				\end{array} \Big/
+				$ \underline{Lehenengo motako irrazionala}
+				$ \Rightarrow $ \underline{Arrazionala}
+		\end{enumerate}
 
-	\section{Integral Mugatua}
-		\subsection{Barrowren erregela}
-			$ \int_a_b f(x) \xder = [f(x)]{_a ^b} = f(b) - f(a) $
+	\subsection{Trigonometrikoak}
+
+\section{Integral Mugatua}
+	\subsection{Barrowren erregela}
+		$ \int_a^b f(x) \xder = [f(x)]{_a ^b} = f(b) - f(a) $
 
 \end{document}

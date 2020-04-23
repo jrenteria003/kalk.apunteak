@@ -11,9 +11,59 @@
 \DeclareMathOperator{\argsh}{argsh}
 \DeclareMathOperator{\argch}{argch}
 \DeclareMathOperator{\argth}{argth}
+\DeclareMathOperator{\cosec}{cosec}
+\DeclareMathOperator{\cotan}{cotan}
 
 \begin{document}
-	\section{Integrazio metodoak}
+	
+	\section{Berehalakoak}
+
+		$ \int k f(x) \xder = k \int f(x) \xder $
+
+		$ \int [f(x) + g(x)] \xder = \int f(x) \xder + \int g(x) \xder $
+
+		$ \int f\prime(x) {[ f(x) ]}^n \xder = \frac{{[f(x)]}^{n+1}}{n+1} \quad baldin n \neq -1 $
+
+		$ \int \frac{f\prime(x)}{f(x)} \xder = \ln | f(x) | + k $
+
+		$ \int f\prime(x) e^{f(x)} \xder = e^{f(x)} + k $
+
+		$ \int f\prime(x) a^{f(x)} \xder = \frac{a^{f(x)}}{\ln a} + k $
+
+		$ \int f\prime(x) \sin f(x) \xder = - \cos f(x) + k $
+
+		$ \int f\prime(x) \cos f(x) \xder = \sin f(x) + k $
+
+		$ \int \frac{f\prime(x)}{\cos^2 f(x)} \xder = \int f\prime(x) \sec^2 f(x) \xder = 
+			\int f\prime(x) [ 1 + \tan^2 f(x) ] \xder = \tan f(x) + k $
+
+		$ \int \frac{f\prime(x)}{\sin^2 f(x)} \xder = \int f\prime(x) \cosec^2 f(x) \xder = 
+			\int f\prime(x) [ 1 + \cotan^2 f(x) ] \xder = \cotan f(x) + k $
+
+		$ \int \frac{f\prime(x)}{\sqrt{1 - {[f(x)]}^{2}}} \xder = \arcsin f(x) + k $
+
+		$ \int \frac{-f\prime(x)}{\sqrt{1 - {[f(x)]}^{2}}} \xder = \arccos f(x) + k $
+
+		$ \int \frac{f\prime(x)}{\sqrt{1 + {[f(x)]}^{2}}} \xder = \arctan f(x) + k $
+
+		$ \int f\prime(x) \cosh f(x) \xder = \sinh f(x) + k $
+
+		$ \int f\prime(x) \sinh f(x) \xder = \cosh f(x) + k $
+
+		$ \int \frac{f\prime(x)}{\cosh^2 f(x)} \xder = \tanh f(x) + k $
+
+		$ \int \frac{f\prime(x)}{\sin^2 f(x)} \xder = - coth f(x) + k $
+
+		$ \int \frac{f\prime(x)}{\sqrt{1 + {[f(x)]}^{2}}} \xder = \argsh f(x) + k = 
+			\ln | f(x) + \sqrt{1 + {[f(x)]}^{2}} $
+
+		$ \int \frac{f\prime(x)}{\sqrt{{[f(x)]}^{2}} - 1} \xder = \argch f(x) + k = 
+			\ln | f(x) + \sqrt{{[f(x)]}^{2} - 1} $
+
+		$ \int \frac{f\prime(x)}{\sqrt{1 - {[f(x)]}^{2}}} \xder = \argth f(x) + k = 
+			\ln | f(x) + \sqrt{1 - {[f(x)]}^{2}} $
+
+	\section{Integral mugagabeak}
 		\subsection{Aldagai aldaketa}
 			$ \int f(x) \xder = \left/
 				\begin{array}{c}

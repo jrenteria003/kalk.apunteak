@@ -15,12 +15,12 @@
 \begin{document}
 	\section{Integrazio metodoak}
 		\subsection{Aldagai aldaketa}
-			$ \int f(x) \xder = \Big{/}
+			$ \int f(x) \xder = \left/
 				\begin{array}{c}
 					x = \phi (t) \\
 					dx = \phi'(t) \tder
 				\end{array}
-				\Big{/}
+				\right/
 				= \int f(\phi(t)) \phi' (t) \tder =
 				\int g(t) \tder = G (t) + C = G (\phi^{-1} (x)) + C
 			$
@@ -174,10 +174,12 @@
 		$ \int R (e^x) \xder $
 
 			aldaketa $ \Rightarrow
-			\begin{array}{c}
-				e^x = t\\
-				e^x \xder = \tder
-			\end{array}
+			\left/
+				\begin{array}{c}
+					e^x = t\\
+					e^x \xder = \tder
+				\end{array}
+			\right/
 			\Rightarrow $ \underline{Arrazionala}
 
 	\subsection{Irrazionalak}
@@ -248,44 +250,49 @@
 				 \Rightarrow $
 				\underline{Arrazionala}
 			\item $ \frac{m+1}{n} \in Z \Rightarrow 
-				\begin{array}{c}
-					x^n = t\\
-					x = t^{\frac{1}{n}}\\
-					\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
-				\end{array} \Rightarrow
+				\left/
+					\begin{array}{c}
+						x^n = t\\
+						x = t^{\frac{1}{n}}\\
+						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+					\end{array}
+				\right/ \Rightarrow
 				\int t^{\frac{m}{n}} (a + bt)^p \frac{1}{n}
 				t^{\frac{1}{n}-1} \tder = 
 				\frac{1}{n} \int t^{\frac{m+1}{n}-1}
 				(a + bt)^p \tder =
-				\Big/
-				\begin{array}{c}
-					a + bt = z\\
-					b \tder = \zder
-				\end{array} 
-				\Big/ = 
+				\left/
+					\begin{array}{c}
+						a + bt = z\\
+						b \tder = \zder
+					\end{array} 
+				\right/ = 
 				\frac{1}{nb} \int (\frac{z-a}{b})^{\frac{m+1}{n}-1}
 				z^p \zder \Rightarrow $
 				\underline{Lehenengo motako irrazionala} 
 				$ \Rightarrow $
 				\underline{Arrazionala}
 			\item $ \frac{m+1}{n} + p \in Z \Rightarrow
-				\begin{array}{c}
-					x^n = t\\
-					x = t^{\frac{1}{n}}\\
-					\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
-				\end{array} \Rightarrow
+				\left/
+					\begin{array}{c}
+						x^n = t\\
+						x = t^{\frac{1}{n}}\\
+						\xder = \frac{1}{n} t^{\frac{1}{n}-1} \tder
+					\end{array}
+				\right/ \Rightarrow
 				\int t^{\frac{m}{n}} (a + bt)^p \frac{1}{n}
 				t^{\frac{1}{n}-1} \tder = \frac{1}{n}
 				\int t^{\frac{m+1}{n}-1} (a + bt)^p
 				\frac{t^p}{t^p} \tder = \frac{1}{n}
 				\int t^{\frac{m+1}{n}-1+p}
 				(\frac{a + bt}{t})^p \tder \Rightarrow
-				\Big/
-				\begin{array}{c}
-					\frac{a + bt}{t} = z\\
-					\frac{-a}{t^2} \tder = \zder
-				\end{array} \Big/
-				$ \underline{Lehenengo motako irrazionala}
+				\left/
+					\begin{array}{c}
+						\frac{a + bt}{t} = z\\
+						\frac{-a}{t^2} \tder = \zder
+					\end{array}
+				\right/ $
+				\underline{Lehenengo motako irrazionala}
 				$ \Rightarrow $ \underline{Arrazionala}
 		\end{enumerate}
 
@@ -353,8 +360,77 @@
 			$ \int \cos (mx) \sin (nx) \xder = \frac{1}{2}
 					\int [ \sin (nx + mx) + \sin (nx - mx) ] \xder $
 
+	\subsection{Hiperbolikoak}
+		\subsubsection{$ \int R(\sinh x, \cosh x) \xder $}
+			$ \text{(bikoitia):} \tanh x = t \quad
+				\left\{
+				\begin{array}{c}
+					\xder = \frac{\tder}{1+{t}^{2}}\\
+					\sinh x = \frac{t}{\sqrt{1+{t}^{2}}}\\
+					\cosh x = \frac{1}{1+{t}^{2}}
+				\end{array}
+				\right.
+			$ \quad
+			$ \text{(bakoitia):} \tanh \frac{x}{2} = t \quad
+				\left\{
+				\begin{array}{c}
+					\xder = \frac{2\tder}{1+{t}^{2}}\\
+					\sinh x = \frac{2t}{1+{t}^{2}}\\
+					\cosh x = \frac{1-{t}^{2}}{1+{t}^{2}}
+				\end{array}
+				\right.
+			$
+		\subsubsection{$ \int R(\tanh x) \xder $}
+			aldaketa
+			$
+			\left/
+				\begin{array}{c}
+					\tanh x = t\\
+					\xder = \frac{\tder}{1-{t}^{2}}
+				\end{array}
+			\right/ \Rightarrow $ \underline{Arrazionala}
+
+		\subsubsection{$ \int \sinh^{m}x \cosh^{n} x \xder $}
+			\begin{itemize}
+				\item $ m \quad \text{bakoitia} \Rightarrow \cosh x = t $
+				\item $ n \quad \text{bakoitia} \Rightarrow \sinh x = t $
+				\item $ 
+					\left.
+					\begin{array}{c}
+						m\\
+						n
+					\end{array}  \right\} \text{bakoitia} \Rightarrow
+					\cosh x = t \quad \text{edo}\quad\sinh x = t $
+				\item $
+					\left.
+					\begin{array}{c}
+						m\\
+						n
+					\end{array} \right\} \text{bikoitia} \Rightarrow
+						\begin{array}{c}
+							\cosh^{2} x = \frac{1+\cosh 2x}{2}\\
+							\sinh^{2} x = \frac{\cosh 2x -1}{2}
+						\end{array} $
+			\end{itemize}
+			
+
 \section{Integral Mugatua}
 	\subsection{Barrowren erregela}
 		$ \int_a^b f(x) \xder = [f(x)]{_a^b} = f(b) - f(a) $
+	
+	\subsection{Aplikazioak}
+		\subsubsection{Azalera}
+			$ A = \int_a^b f(x) \xder $
+
+		\subsubsection{Biraketa gorputz baten bolumena}
+			$ V_x = \pi \int_a^b y^2 \xder $
+
+			$ V_y = \pi \int_c^d x^2 \xder $
+
+		\subsubsection{Arku baten luzera}
+			$ L = \int_a^b \sqrt{1 + {(y\prime)}^{2}} \xder $
+
+		\subsubsection{Biraketa gorputz baten azalera}
+			$ A = 2\pi \int_a^b y \sqrt{1 + {(y\prime)}^{2}} \xder $
 
 \end{document}
